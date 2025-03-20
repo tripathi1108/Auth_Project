@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/auth';
+const API_URL = 'https://auth-project-1-7on7.onrender.com/api/auth';
 
 export const register = async (username: string, email: string, password: string) => {
   const response = await axios.post(`${API_URL}/register`, { username, email, password });
@@ -13,7 +13,7 @@ export const login = async (email: string, password: string) => {
 };
 
 export const getProtectedData = async (token: string) => {
-  const response = await axios.get('http://localhost:5000/api/protected', {
+  const response = await axios.get('https://auth-project-1-7on7.onrender.com/api/protected', {
     headers: { Authorization: `Bearer ${token}` },
   });
   return response.data;

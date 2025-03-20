@@ -43,7 +43,7 @@ const Home: React.FC = () => {
       </section>
 
       <footer className="home-footer">
-        <p>© 2023 Your Company. All rights reserved.</p>
+        <p>© 2025 Your Company. All rights reserved.</p>
       </footer>
     </div>
   );
