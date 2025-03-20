@@ -11,7 +11,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Enable CORS
-app.use(cors({ origin: "*" }));
+app.use(cors({
+  origin: "https://auth-project-alpha.vercel.app", // Allow only your frontend
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true
+}));
 
 // Middleware
 app.use(express.json());
